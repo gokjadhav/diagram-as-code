@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+    py-diagram:
+        build:
+            context: .
+        container_name: py-diagram-as-code
+        volumes:
+            - ./:/srv/app
+        entrypoint: ["tail", "-f", "/dev/null"]
