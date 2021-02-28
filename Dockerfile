@@ -1,4 +1,3 @@
-#ARG PYTHON_VERSION=3.9.1-alpine3.13
 ARG PYTHON_VERSION=3.10.0a5-alpine3.13
 
 FROM python:${PYTHON_VERSION}
@@ -22,8 +21,6 @@ RUN pip install pipenv cryptography
 RUN apk --no-cache add msttcorefonts-installer fontconfig && \
     update-ms-fonts && \
     fc-cache -f
-#This is required with py 3.9 else you can usually install latest version of cryptography
-#RUN pip install cryptography==3.1.1
 
 RUN pip install poetry
 
