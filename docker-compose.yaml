@@ -4,7 +4,7 @@ services:
     py-diagram:
         build:
             context: .
-        container_name: py-diagram-as-code
+        container_name: py-diagram
         volumes:
             - ./:/srv/app
         entrypoint: ["tail", "-f", "/dev/null"]
